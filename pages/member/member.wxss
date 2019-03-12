@@ -1,0 +1,10 @@
+/* pages/member/member.wxss */
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+.bgk{
+      background-image:url(https://static.bonnieclyde.cn/855e736d0a391fd361d6e8991bdb90e4bbe7.png);
+}

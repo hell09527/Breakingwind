@@ -1,0 +1,79 @@
+<scroll-view>
+<!-- 搜索 -->
+  <view class="cu-bar search bg-white">
+    <view class="cu-avatar round" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);"></view>
+    <view class='search-form round'>
+      <text class="icon-search"></text>
+      <input type="text" placeholder="搜索您想要的宝贝" confirm-type="search"></input>
+    </view>
+    <view class='action'>
+      <text>上海</text>
+      <text class="icon-triangledownfill"></text>
+    </view>
+  </view>
+<!-- 轮播图 -->
+<view class='slideshow'>
+ <swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}"            indicator-dots="true" circular="true" autoplay="true" interval="1000" duration="500">
+  <swiper-item wx:for="{{4}}" wx:key>
+    <image src="https://image.weilanwl.com/img/4x3-{{index+1}}.jpg" mode='aspectFill'></image>
+  </swiper-item>
+</swiper>
+</view>
+<!-- 分类选择列表 -->
+<view class="cu-list grid col-4 no-border">
+  <view class="cu-item" wx:for="{{iconList}}" wx:key wx:if="{{index<gridCol*2}}">
+    <view class='icon-{{item.icon}} text-{{item.color}}'>
+      <view class="cu-tag badge" wx:if="{{item.badge!=0}}">
+        <block wx:if="{{item.badge!=1}}">{{item.badge>99?'99+':item.badge}}</block>
+      </view>
+    </view>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<!-- 二级页面展示 -->
+<view  class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://albedo-theme.com/wp-content/uploads/2016/08/pexels-photo-26180.jpg')">
+  <view class='padding-xl text-white'>
+    <view class='padding-xs text-xl'>
+      我和春天有个约会
+    </view>
+    <view class='padding-xs'>
+      I Have a Date with Spring
+    </view>
+  </view>
+</view>
+<view   class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://albedo-theme.com/wp-content/uploads/2016/08/pexels-photo-26180.jpg')">
+  <view class='padding-xl text-white'>
+    <view class='padding-xs text-xl'>
+      我和春天有个约会
+    </view>
+    <view class='padding-xs'>
+      I Have a Date with Spring
+    </view>
+  </view>
+</view>
+<!-- 商品show -->
+    <view class="body">
+            <block wx:for='{{index_goods_list}}' wx:key='' wx:for-item='shops' wx:for-index='index'>
+            <view  class='goods_all' catchtap='listClick' data-title='{{shops.goods_name}}' >
+    <view class="all-box">
+      <image src="{{shops.pic_cover_small}}" mode="widthFix"></image>
+      <view class="shop-detail">
+        <text  decode="true" class="title">
+          <block wx:for='{{shops.group_query}}' wx:key='' wx:for-item='vo'>
+            <text class="i goods_tab">{{shops.group_name}}</text>
+          </block>{{shops.goods_name}}
+        </text>
+        <view class="shop-detail-price">
+          <text>￥{{shops.promotion_price}}</text>
+          <view style='text-decoration:line-through;color:#d7d7d7;font-size:12px;' wx:if="{{shops.market_price - shops.promotion_price > 0}}">￥{{shops.market_price}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+            </block>
+          </view>
+
+
+
+
+</scroll-view>
