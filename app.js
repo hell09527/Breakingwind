@@ -6,7 +6,8 @@ App({
     encryptedData:'',//获取token三大必要参数
     iv:'', //获取token三大必要参数
     token:'',
-    userInfo:''
+    userInfo:'',
+    unregistered:''
   },
     //app初始化函数
   onLaunch: function() {
@@ -139,6 +140,29 @@ App({
   //隐藏加载提示
   hideToast: function () {
     wx.hideToast();
+  },
+  /**
+ * 状态重置
+ */
+  restStatus: function (that, parm) {
+    let d = {};
+    d[parm] = 0;
+    that.setData(d);
+  },
+  /**
+ * 界面弹框
+ */
+  showBox: function (that, content, time = 1500) {
+    setTimeout(function callBack() {
+      that.setData({
+        prompt: content
+      });
+    }, 200)
+    setTimeout(function callBack() {
+      that.setData({
+        prompt: ''
+      });
+    }, time + 200)
   },
   //模态框提示
   showModal: function (param) {

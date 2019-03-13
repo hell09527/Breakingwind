@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/classify/classify",
     "pages/cart/cart",
-    "pages/member/member"
+    "pages/member/member",
+    "pages/goods/goodsdetail/goodsdetail"
+    
   ],
     "tabBar": {
       "borderStyle": "black",

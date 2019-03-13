@@ -54,7 +54,7 @@
 <!-- 商品show -->
     <view class="body">
             <block wx:for='{{index_goods_list}}' wx:key='' wx:for-item='shops' wx:for-index='index'>
-            <view  class='goods_all' catchtap='listClick' data-title='{{shops.goods_name}}' >
+            <view  class='goods_all' catchtap='listClick' data-title='{{shops.goods_name}}' data-url='/goods/goodsdetail/goodsdetail?goods_id={{goods_id}}&&goods_name={{goods_name}}'>
     <view class="all-box">
       <image src="{{shops.pic_cover_small}}" mode="widthFix"></image>
       <view class="shop-detail">

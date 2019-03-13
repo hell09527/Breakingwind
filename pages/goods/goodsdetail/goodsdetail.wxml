@@ -1,0 +1,10 @@
+<scroll-view>
+  <!-- 商品轮播图 -->
+  <swiper  style='height:{{swiperHeight}}px' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}" interval="{{interval}}" duration="{{duration}}" >
+    <block wx:for="{{background}}" wx:key="*this">
+      <swiper-item>
+        <image  catchtap='preivewImg' data-index='{{index}}'  style="width:100%;" src="{{item.url}}" mode='widthFix'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</scroll-view>

@@ -172,6 +172,12 @@ Page({
       }
     });
     },
+  listClick: function (event) {
+    let url = event.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: '/pages' + url,
+    })
+  },
   /**
  * 首页初始化
  */
