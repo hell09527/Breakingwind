@@ -312,4 +312,11 @@ Page({
       }
     })
   },
+  location:function(){
+    wx.getLocation({
+      success: res => {
+        console.log(res)
+      }
+    })
+  }
 })

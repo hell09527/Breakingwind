@@ -6,7 +6,7 @@
       <text class="icon-search"></text>
       <input type="text" placeholder="搜索您想要的宝贝" confirm-type="search"></input>
     </view>
-    <view class='action'>
+    <view class='action' catchtap='location'>
       <text>上海</text>
       <text class="icon-triangledownfill"></text>
     </view>
