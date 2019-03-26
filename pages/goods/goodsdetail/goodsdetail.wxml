@@ -7,4 +7,18 @@
       </swiper-item>
     </block>
   </swiper>
+
+  <view class='ul'>
+  <view class="li {{isTouchMove ? 'touch-move-active' : ''}}"    bindtouchstart="touchstart" bindtouchmove="touchmove">
+   <!-- <view class='cf'></view> -->
+  <view class='all'>
+  <view class='list01'>list01</view>
+   <view class='list02'>list02</view>
+  </view>
+   <view class='del'>删除</view>
+     
+  </view>
+  
+  
+  </view>
 </scroll-view>

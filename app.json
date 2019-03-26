@@ -4,7 +4,9 @@
     "pages/classify/classify",
     "pages/cart/cart",
     "pages/member/member",
-    "pages/goods/goodsdetail/goodsdetail"
+    "pages/goods/goodsdetail/goodsdetail",
+    "pages/goods/swtich/swtich"
+    
     
   ],
     "permission": {

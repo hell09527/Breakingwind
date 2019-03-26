@@ -171,6 +171,33 @@ Page({
         })
       }
     });
+
+
+
+
+    wx.loadFontFace({
+      family: 'Bitstream Vera Serif Bold',
+      source: 'url("https://www.jianbinggouzi.club/fonts.ttf")',
+      success: function(res) {
+        console.log(res) //  loaded
+      },
+      fail: function(res) {
+        console.log(res) //  error
+      },
+      complete: function(res) {
+        console.log(res);
+      }
+     })
+
+
+
+
+
+
+
+
+
+
     },
   listClick: function (event) {
     let url = event.currentTarget.dataset.url;
@@ -237,7 +264,7 @@ Page({
             timeArray[index] = {};
             timeArray[index].end = 0;
             timeArray[index].end_time = discount_list[index].end_time;
-            that.timing(that, timeArray, index);
+            // that.timing(that, timeArray, index);
           }
           //商品楼层图片处理
           // console.log(data);
@@ -317,6 +344,11 @@ Page({
       success: res => {
         console.log(res)
       }
+    })
+  },
+  lo_ac:function(){
+    wx.navigateTo({
+      url: '/pages/goods/swtich/swtich' ,
     })
   }
 })

@@ -2,6 +2,7 @@
 <!-- 搜索 -->
   <view class="cu-bar search bg-white">
     <view class="cu-avatar round" style="background-image:url(https://image.weilanwl.com/img/square-2.jpg);"></view>
+
     <view class='search-form round'>
       <text class="icon-search"></text>
       <input type="text" placeholder="搜索您想要的宝贝" confirm-type="search"></input>
@@ -31,7 +32,7 @@
   </view>
 </view>
 <!-- 二级页面展示 -->
-<view  class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://albedo-theme.com/wp-content/uploads/2016/08/pexels-photo-26180.jpg')">
+<view  catchtap='lo_ac' class="bg-img bg-mask padding-tb-xl" style="background-image: url('https://albedo-theme.com/wp-content/uploads/2016/08/pexels-photo-26180.jpg')">
   <view class='padding-xl text-white'>
     <view class='padding-xs text-xl'>
       我和春天有个约会

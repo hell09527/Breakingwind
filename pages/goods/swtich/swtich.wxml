@@ -1,0 +1,10 @@
+<!--pages/goods/swtich/swtich.wxml-->
+<scroll-view>
+ <view class="ant_box">
+  <view class="uck" animation="{{animation}}">
+  球
+  </view>
+ </view>
+<button class='fix' catchtap='instruct'>动画指令</button>
+  
+</scroll-view>

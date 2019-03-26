@@ -1,0 +1,23 @@
+/* pages/goods/swtich/swtich.wxss */
+.ant_box{
+width: 100%;
+height: 400rpx;
+background: cyan;
+
+}
+.uck{
+    width:50px ;
+    height:50px ;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background: red;
+}
+.fix{
+   position: fixed;
+   bottom: 0;
+    width:100% ;
+
+    height: 48px;
+   
+}
