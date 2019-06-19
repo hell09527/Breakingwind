@@ -1,3 +1,5 @@
+
+<import   src="../../template/shop-list-show/shop-list-show.wxml"   />
 <scroll-view>
 <!-- 搜索 -->
   <view class="cu-bar search bg-white">
@@ -52,28 +54,10 @@
     </view>
   </view>
 </view>
-<!-- 商品show -->
-    <view class="body">
-            <block wx:for='{{index_goods_list}}' wx:key='' wx:for-item='shops' wx:for-index='index'>
-            <view  class='goods_all' catchtap='listClick' data-title='{{shops.goods_name}}' data-url='/goods/goodsdetail/goodsdetail?goods_id={{goods_id}}&&goods_name={{goods_name}}'>
-    <view class="all-box">
-      <image src="{{shops.pic_cover_small}}" mode="widthFix"></image>
-      <view class="shop-detail">
-        <text  decode="true" class="title">
-          <block wx:for='{{shops.group_query}}' wx:key='' wx:for-item='vo'>
-            <text class="i goods_tab">{{shops.group_name}}</text>
-          </block>{{shops.goods_name}}
-        </text>
-        <view class="shop-detail-price">
-          <text>￥{{shops.promotion_price}}</text>
-          <view style='text-decoration:line-through;color:#d7d7d7;font-size:12px;' wx:if="{{shops.market_price - shops.promotion_price > 0}}">￥{{shops.market_price}}</view>
-        </view>
-      </view>
-    </view>
-  </view>
-            </block>
-          </view>
 
+ <block wx:for='{{index_goods_list}}' wx:key='' wx:for-item='item' wx:for-index='index'>
+  <template is='shopList'  data="{{...item}}"/> 
+  </block>
 
 
 
